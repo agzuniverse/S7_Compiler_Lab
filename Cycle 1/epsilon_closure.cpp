@@ -42,6 +42,11 @@ public:
     {
         // Epsilon is valid symbol for all NFA
         symbols.insert('e');
+
+        // Input all the required data to finish constructing the NFA
+        inputStates();
+        inputSymbols();
+        inputTransitions();
     }
 
     void inputSymbols()
@@ -158,8 +163,6 @@ int main()
     cout << "Enter number of transitions\n";
     cin >> transitions;
     NFA z{states, symbols, transitions};
-    z.inputStates();
-    z.inputSymbols();
-    z.inputTransitions();
+
     z.findClosures();
 }
