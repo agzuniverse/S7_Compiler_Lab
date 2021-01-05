@@ -1,6 +1,6 @@
 %%
 .*aswi.*\n ;
-. return 1;
+. printf("%s", yytext);
 %%
 int yywrap(){}
 

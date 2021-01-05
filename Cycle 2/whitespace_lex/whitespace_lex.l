@@ -2,7 +2,7 @@
 \/\*(.*\n)*.*\*\/ ;
 \/\/.*\n ;
 [\t\n ]+ ;
-. return 1;
+. printf("%c", yytext[0]);
 %%
 int yywrap(){}
 
